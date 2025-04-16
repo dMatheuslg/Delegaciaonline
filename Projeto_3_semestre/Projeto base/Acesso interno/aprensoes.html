@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apreensões</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu Central</h2>
+        <ul>
+            <li><button onclick="location.href='home.html'">Início</button></li>
+            <li><button onclick="location.href='cadastro.html'">Cadastros de viaturas e Agentes</button></li>
+            <li><button onclick="location.href='monitoramento.html'">Monitoramento</button></li>
+            <li><button onclick="location.href='aprensoes.html'">Apreensões</button></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <section class="formulario">
+            <h2>Cadastro de Apreensão</h2>
+            <form action="#" method="post" class="form">
+                <h3>Informações sobre o Suspeito:</h3>
+                <label for="nomeSuspeito">Nome Completo:</label>
+                <input type="text" id="nomeSuspeito" name="nomeSuspeito" required>
+
+                <label for="cpfSuspeito">CPF:</label>
+                <input type="text" id="cpfSuspeito" name="cpfSuspeito" required>
+
+                <label for="rgSuspeito">RG:</label>
+                <input type="text" id="rgSuspeito" name="rgSuspeito" required>
+
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <h3>Detalhes sobre a Apreensão:</h3>
+                <label for="dataApreensao">Data da Apreensão:</label>
+                <input type="date" id="dataApreensao" name="dataApreensao" required>
+
+                <label for="horaApreensao">Hora da Apreensão:</label>
+                <input type="time" id="horaApreensao" name="horaApreensao" required>
+
+                <label for="localApreensao">Local da Apreensão:</label>
+                <input type="text" id="localApreensao" name="localApreensao" required>
+
+                <label for="tipoCrime">Tipo de Crime:</label>
+                <select id="tipoCrime" name="tipoCrime" required>
+                    <option value="">Selecione</option>
+                    <option value="furto">Furto</option>
+                    <option value="roubo">Roubo</option>
+                    <option value="trafico">Tráfico de drogas</option>
+                    <option value="homicidio">Homicídio</option>
+                </select>
+
+                <label for="descricaoOcorrido">Descrição do Ocorrido:</label>
+                <textarea id="descricaoOcorrido" name="descricaoOcorrido" rows="4" required></textarea>
+
+                <h3>Itens Apreendidos:</h3>
+                <label for="itensApreendidos">Descrição dos Itens:</label>
+                <textarea id="itensApreendidos" name="itensApreendidos" rows="4" required></textarea>
+
+                <label for="quantidadeItens">Quantidade de Itens:</label>
+                <input type="number" id="quantidadeItens" name="quantidadeItens" required>
+
+                <h3>Informações sobre o Veículo (se aplicável):</h3>
+                <label for="placaVeiculo">Placa do Veículo:</label>
+                <input type="text" id="placaVeiculo" name="placaVeiculo">
+
+                <label for="modeloVeiculo">Modelo do Veículo:</label>
+                <input type="text" id="modeloVeiculo" name="modeloVeiculo">
+
+                <label for="marcaVeiculo">Marca do Veículo:</label>
+                <input type="text" id="marcaVeiculo" name="marcaVeiculo">
+
+                <label for="anoVeiculo">Ano de Fabricação:</label>
+                <input type="number" id="anoVeiculo" name="anoVeiculo">
+
+                <h3>Autor da Apreensão:</h3>
+                <label for="nomePolicial">Nome do Policial Responsável:</label>
+                <input type="text" id="nomePolicial" name="nomePolicial" required>
+
+                <label for="matriculaPolicial">Número de Matrícula:</label>
+                <input type="text" id="matriculaPolicial" name="matriculaPolicial" required>
+
+                <h3>Observações Finais:</h3>
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+                <button type="submit" class="btn">Cadastrar Apreensão</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

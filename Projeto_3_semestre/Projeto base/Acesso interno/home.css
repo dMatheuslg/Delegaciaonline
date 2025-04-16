@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #000;
+    margin: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #f80303;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #000;
+    font-size: 1rem;
+    border: none;
+    border-left: 4px solid #f80303;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: #e0e0e0;
+}
+
+.container {
+    margin-left: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+    width: calc(100% - 270px);
+}
+
+.grafico {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 800px;
+}
+
+.grafico h2 {
+    color: #fc0000;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formulario {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 320px;
+}
+
+.formulario h2 {
+    color: #fc0000;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form input,
+.form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    background-color: #f80303;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #d10000;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 320px;
+    margin-left: 45rem;
+    margin-top: 10rem;
+    text-align: center;
+}

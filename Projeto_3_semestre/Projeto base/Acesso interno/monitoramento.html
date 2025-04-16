@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Crimes por Região</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu Central</h2>
+        <ul>
+            <li><button onclick="location.href='home.html'">Início</button></li>
+            <li><button onclick="location.href='cadastro.html'">Cadastros de viaturas e Agentes</button></li>
+            <li><button onclick="location.href='monitoramento.html'">Monitoramento</button></li>
+            <li><button onclick="location.href='aprensoes.html'">Apreensões</button></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <section class="grafico">
+            <h2>Tipos de Crimes por Região</h2>
+            <canvas id="graficoCrimes"></canvas>
+        </section>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('graficoCrimes').getContext('2d');
+
+        const graficoCrimes = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Zona Norte', 'Zona Sul', 'Zona Leste', 'Zona Oeste', 'Centro'],
+                datasets: [
+                    {
+                        label: 'Furto',
+                        data: [12, 19, 5, 8, 6],
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)'
+                    },
+                    {
+                        label: 'Roubo',
+                        data: [9, 15, 7, 10, 5],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                    },
+                    {
+                        label: 'Homicídio',
+                        data: [3, 6, 4, 2, 1],
+                        backgroundColor: 'rgba(255, 206, 86, 0.6)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribuição de Crimes por Região'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Quantidade de Crimes'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Região'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
